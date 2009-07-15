@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="/stylesheets/prueba.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <title>Wyslist - Bookgut : pruebas</title>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".secondary").hide();
+
+        $(".line.navigation").hover(function() {
+          $(".secondary").slideDown();
+        });
+
+        $(".line.navigation").click(function () {
+          $(".secondary").slideUp();
+
+        });
+
+
+      });
+    </script>
+  </head>
+  <body>
+
+
+    <div id="container">
+
+      <div id="left">&nbsp;</div>
+
+
+      <div id="all">
+        <div id="main-logo">
+          <%= image_tag 'wyslist.png' %>
+        </div>
+
+        <div id="center">
+
+          <div id="header">
+            <div class="line top">
+               <div class="space">&nbsp;</div>
+              <div id="quotes">&nbsp;</div>
+              <div class="color" id="color-a">&nbsp;</div>
+            </div>
+            <div class="line colors">
+              <div class="color" id="color-1">&nbsp;</div>
+              <div class="color" id="color-2">&nbsp;</div>
+              <div class="color" id="color-3">&nbsp;</div>
+              <div class="color" id="color-4">&nbsp;</div>
+            </div>
+            <div class="line navigation">
+
+              <div class="main">
+                <div class="space">&nbsp;</div>
+
+                <ul>
+                  <li><%= navigation_to 'PRESENTACIÓN', static_path(:presentacion) %></li>
+                  <li><%= navigation_to 'PROGRAMA', static_path(:programa) %></li>
+                  <li><%= navigation_to 'DISTRIBUCIÓN', static_path(:distribucion) %></li>
+                  <li><%= navigation_to 'PRENSA', static_path(:prensa) %></li>
+                </ul>
+
+                <div class="space" id="contact-us">&nbsp;</div>
+              </div>
+
+              <div class="secondary">
+                <div class="spacelogo">&nbsp;</div>
+                <div class="item">
+                <ul>
+                    <li><%= navigation_to 'qué es wyslyst', static_path('presentacion/que_es') %></li>
+                    <li><%= navigation_to 'cocinando', static_path('presentacion/cocinando') %></li>
+                    <li><%= navigation_to 'wyslyst crew', static_path('presentacion/crew') %></li>
+                  </ul>
+                </div>
+                <div class="item"><ul>
+                    <li><%= navigation_to 'arquitectura abierta', static_path('programa/arquitectura_abierta') %></li>
+                    <li><%= navigation_to 'investigación abierta', static_path('programa/investigacion_abierta') %></li>
+                    <li><%= navigation_to 'pop-ups', static_path('programa/pop_ups') %></li>
+                    <li><%= navigation_to 'arquitectura y mas', static_path('programa/arquitectura_mas') %></li>
+                </ul></div>
+                <div class="item"><ul>
+                    <li><%= navigation_to 'donde estan los libros?', static_path('distribucion/donde') %></li>
+                    <li><%= navigation_to 'quieres ser un nodo?', static_path('distribucion/nodos') %></li>
+                    <li><%= navigation_to 'reserva tu libro', static_path('distribucion/reserva') %></li>
+                </ul></div>
+                <div class="item"><ul>
+                    <li><%= navigation_to 'wyslist TV', static_path('prensa/wyslist_tv') %></li>
+                    <li><%= navigation_to 'wyslist en los medios', static_path('prensa/medios') %></li>
+                    <li><%= navigation_to 'press kit download', static_path('prensa/press_kit') %></li>
+                </ul></div>
+                <div class="space">&nbsp;</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="content">
+            <%= yield %>
+          </div>
+
+
+        </div>
+        <div id="extra">
+          <div class="color" id="color-b">&nbsp;</div>
+          <div class="color" id="color-c">&nbsp;</div>
+          <div class="color" id="color-d">&nbsp;</div>
+          <div class="color" id="color-e">&nbsp;</div>
+          <div id="news">
+            <div class="logo">&nbsp;</div>
+            <div class="content">NOTICIAS</div>
+          </div>
+          <div id="advertisement">PUBLICIDAD</div>
+        </div>
+
+        <div id="right">&nbsp;</div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
